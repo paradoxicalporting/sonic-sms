@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,26 +10,30 @@ html
     <title>Sonic the Hedgehog</title>
     
     <style>
-        /* Forces the webpage to perfectly fit the iPad display boundaries */
         body, html {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
             background-color: #000;
         }
-        /* Forces your specific Sonic game to fill the screen without borders */
+
+        /* Forces the container box to be widescreen */
         iframe {
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
             border: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Your optimized Sonic Master System web view -->
-    <iframe src="https://funhtml5games.com?embed=sonic" scrolling="no"></iframe>
+    <!-- Using the specific embed URL to target just the emulator game loop -->
+    <iframe src="https://funhtml5games.com" scrolling="no"></iframe>
 
 </body>
+</html>
